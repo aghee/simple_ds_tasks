@@ -3,7 +3,7 @@ names=['a','b','a','d','l','m','a','l','n ','n ','n ','d','d','a','z','a','d','m
 for name in names:
     counts[name]=counts.get(name,0)+1
 print(counts)
-#import matplotlib, note use jupyterlab for histogram
+#import matplotlib to view histogram, or use jupyterlab for histogram
 import matplotlib.pyplot as plt
 keys=list(counts.keys())
 values=list(counts.values())
