@@ -24,8 +24,17 @@ dictone={}
 for name in var1:
     dictone[name]=dictone.get(name,0)+1
 print(dictone)
+from matplotlib import pyplot as plt
+import numpy as np
 import matplotlib.pyplot as plt
 keys=list(dictone.keys())
 values=list(dictone.values())
+#vals=[2,5,8,7,9,8,7,2,5,4]
+#bar graph
 plt.bar(range(len(dictone)),values,tick_label=keys)
+#scatter plots
+#plt.scatter(keys,values)
+#pie charts
+#fig = plt.figure(figsize =(10, 7))
+#plt.pie(vals, labels = var1)
 plt.show()
