@@ -16,8 +16,8 @@ print(len(column_two_list),end=' ')
 print('category items in this workbook')
 
 #piechart
-#fig = plt.figure(figsize =(10, 7))
-#plt.pie(column_two_list, labels=column_one_list)
+fig = plt.figure(figsize =(10, 7))
+plt.pie(column_two_list, labels=column_one_list)
 #plt.show()
 
 
@@ -40,6 +40,6 @@ keys=list(dictone.keys())
 #retrieve a list of all values
 values=list(dictone.values())
 #bar graph
-plt.bar(range(len(dictone)),values,tick_label=keys)
+#plt.bar(range(len(dictone)),values,tick_label=keys)
 #display bar graph
 plt.show()
