@@ -6,19 +6,19 @@ wb = load_workbook("Book1.xlsx") #workbookname
 ws = wb['Sheet6'] #worksheetname
 column_one = ws['A'] #ColumnA
 column_one_list = [column_one[x].value for x in range(len(column_one))] #column_one A as a list
-print(column_one_list)
+print('The first list for keys is:',column_one_list)
 
 #column_two B
 column_two=ws['B']#columnB
 column_two_list=[column_two[x].value for x in range(len(column_two))]#column_two B as a list
-print(column_two_list)
+print('The second list for values is:',column_two_list)
 print('There are',end=' ')
 print(len(column_two_list),end=' ') 
 print('category items in this workbook')
 
 #piechart
-fig = plt.figure(figsize =(10, 7))
-plt.pie(column_two_list, labels=column_one_list)
+#fig = plt.figure(figsize =(10, 7))
+#plt.pie(column_two_list, labels=column_one_list)
 #plt.show()
 
 
@@ -34,5 +34,11 @@ for k in column_one_list:
         #if bool(column_two_list):
             #break
         break
-print('The dictionary is', dictone)     
-
+print('The dictionary is', dictone)
+#retrieve a list of all keys
+keys=list(dictone.keys())
+#retrieve a list of all values
+values=list(dictone.values())
+#bar graph
+plt.bar(range(len(dictone)),values,tick_label=keys)
+plt.show()
