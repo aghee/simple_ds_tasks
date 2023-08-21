@@ -1,6 +1,5 @@
 from openpyxl import load_workbook
 from matplotlib import pyplot as plt
-
 #column_one A
 wb = load_workbook("Book1.xlsx") #workbookname
 ws = wb['Sheet6'] #worksheetname
@@ -34,6 +33,7 @@ for k in column_one_list:
         #if bool(column_two_list):
             #break
         break
+
 print('The dictionary is', dictone)
 #retrieve a list of all keys
 keys=list(dictone.keys())
@@ -41,4 +41,5 @@ keys=list(dictone.keys())
 values=list(dictone.values())
 #bar graph
 plt.bar(range(len(dictone)),values,tick_label=keys)
+#display bar graph
 plt.show()
