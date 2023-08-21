@@ -38,3 +38,18 @@ plt.bar(range(len(dictone)),values,tick_label=keys)
 #fig = plt.figure(figsize =(10, 7))
 #plt.pie(vals, labels = var1)
 plt.show()
+
+"""
+#Trying to find sum of a column in excel using python
+import numpy as np
+import pandas as pd
+#fname=input('Enter the file name:')
+#fhand=open(fname)
+#print(fhand.read())
+df=pd.read_excel(r'C:\Users\agymutembei\Desktop\PySelfpaced\simple_ds_tasks\Book1.xlsx',header=0)
+#print(df)
+last_row=['Sum is:'] + list(df.sum())[1:]
+df2=pd.DataFrame(data=[last_row], columns=df.columns)
+df=df.concat(df2, ignore_index=True)
+print(df)
+"""
